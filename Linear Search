@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// Sequential search function
+func sequentialSearch(arr []int, target int) int {
+    for i, v := range arr {
+        if v == target {
+            return i
+        }
+    }
+    return -1 // return -1 if target is not found
+}
+
+func main() {
+    arr := []int{10, 25, 30, 45, 50}
+    target := 30
+
+    result := sequentialSearch(arr, target)
+    if result != -1 {
+        fmt.Printf("Target found at index %d\n", result)
+    } else {
+        fmt.Println("Target not found")
+    }
+}
